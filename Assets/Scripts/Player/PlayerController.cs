@@ -1171,6 +1171,14 @@ namespace WhiskerKing.Player
             }
         }
 
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                inputBuffer.BufferInput(InputBuffer.InputType.Attack);
+            }
+        }
+
         #endregion
 
         #region Public Interface

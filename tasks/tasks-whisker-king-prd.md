@@ -58,10 +58,10 @@
 - `Assets/Scripts/Player/InputBuffer.cs` - Input buffering system for responsive controls
 - `Assets/Scripts/Player/InputBuffer.Tests.cs` - Unit tests for input buffer system
 - `Assets/Scripts/Camera/CameraController.Tests.cs` - Unit tests for camera system
-- `Assets/Scripts/Combat/TailWhip.cs` - Tail whip combat mechanics
-- `Assets/Scripts/Combat/TailWhip.Tests.cs` - Unit tests for tail whip system
-- `Assets/Scripts/Interactables/CrateSystem.cs` - Crate destruction and interaction system
-- `Assets/Scripts/Interactables/CrateSystem.Tests.cs` - Unit tests for crate system
+- `Assets/Scripts/Combat/TailWhip.cs` - Complete tail whip combat system with precise timing, hit detection, and PRD-compliant parameters
+- `Assets/Scripts/Combat/TailWhip.Tests.cs` - Comprehensive unit tests for tail whip system with PRD validation
+- `Assets/Scripts/Interactables/CrateSystem.cs` - Advanced crate system with 6 types, destruction mechanics, rewards, chain reactions, and special effects
+- `Assets/Scripts/Interactables/CrateSystem.Tests.cs` - Complete unit tests for all crate types and interaction mechanics
 - `Assets/Scripts/Level/LevelManager.cs` - Level progression and checkpoint system
 - `Assets/Scripts/Level/LevelManager.Tests.cs` - Unit tests for level management
 - `Assets/Scripts/Audio/AudioManager.cs` - Centralized audio management system
@@ -117,17 +117,17 @@
   - [x] 3.8 Add comfort options (motion blur toggle, shake intensity slider 0-100%)
   - [x] 3.9 Create camera transition system between modes
 
-- [ ] 4.0 Build combat system with tail whip mechanics and crate destruction
-  - [ ] 4.1 Create TailWhip class with timing system (0.1s windup, 0.18s active, 0.12s recovery)
-  - [ ] 4.2 Implement hit detection with 2.5f range and 270° angle coverage
-  - [ ] 4.3 Add combat parameters (25f damage, 1.5s stun duration)
-  - [ ] 4.4 Create CrateSystem with 6 crate types (Standard, Yarn, Spring, Metal, Boom, Mystery)
-  - [ ] 4.5 Implement crate health and destruction mechanics
-  - [ ] 4.6 Add crate rewards system (Fish Treats, Yarn, special effects)
-  - [ ] 4.7 Create Spring Crate launch mechanics (6m upward launch)
-  - [ ] 4.8 Implement Boom Crate with 2s fuse and 3m chain reaction radius
-  - [ ] 4.9 Add visual and audio feedback for combat actions
-  - [ ] 4.10 Create Mystery Crate random reward system (70% positive, 30% hazard)
+- [x] 4.0 Build combat system with tail whip mechanics and crate destruction
+  - [x] 4.1 Create TailWhip class with timing system (0.1s windup, 0.18s active, 0.12s recovery)
+  - [x] 4.2 Implement hit detection with 2.5f range and 270° angle coverage
+  - [x] 4.3 Add combat parameters (25f damage, 1.5s stun duration)
+  - [x] 4.4 Create CrateSystem with 6 crate types (Standard, Yarn, Spring, Metal, Boom, Mystery)
+  - [x] 4.5 Implement crate health and destruction mechanics
+  - [x] 4.6 Add crate rewards system (Fish Treats, Yarn, special effects)
+  - [x] 4.7 Create Spring Crate launch mechanics (6m upward launch)
+  - [x] 4.8 Implement Boom Crate with 2s fuse and 3m chain reaction radius
+  - [x] 4.9 Add visual and audio feedback for combat actions
+  - [x] 4.10 Create Mystery Crate random reward system (70% positive, 30% hazard)
 
 - [ ] 5.0 Develop level design framework and core gameplay mechanics
   - [ ] 5.1 Create LevelManager class for level progression and state management
