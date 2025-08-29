@@ -94,17 +94,17 @@
   - [x] 1.7 Set up Unity Package Manager dependencies
   - [x] 1.8 Create project configuration file (GameConfig.json) with performance targets
 
-- [ ] 2.0 Implement core player movement system with physics and input handling
-  - [ ] 2.1 Create PlayerController class with Unity's CharacterController component
-  - [ ] 2.2 Implement InputBuffer system with 120ms buffer time for responsive controls
-  - [ ] 2.3 Set up basic movement with run speed (8.0 m/s base, 10.0 m/s slide)
-  - [ ] 2.4 Implement jump mechanics with variable height (3.0m tap, 4.5m hold)
-  - [ ] 2.5 Add double jump system with 2.5m height (75% of single jump)
-  - [ ] 2.6 Implement slide mechanics with 0.6s duration, cancelable after 0.25s
-  - [ ] 2.7 Add coyote time (0.12s) for edge forgiveness
-  - [ ] 2.8 Configure physics settings (gravity -25.0 m/s², air control 0.8x)
-  - [ ] 2.9 Implement ground detection and friction system
-  - [ ] 2.10 Add bounce mechanics with 0.6x velocity retention
+- [x] 2.0 Implement core player movement system with physics and input handling
+  - [x] 2.1 Create PlayerController class with Unity's CharacterController component
+  - [x] 2.2 Implement InputBuffer system with 120ms buffer time for responsive controls
+  - [x] 2.3 Set up basic movement with run speed (8.0 m/s base, 10.0 m/s slide)
+  - [x] 2.4 Implement jump mechanics with variable height (3.0m tap, 4.5m hold)
+  - [x] 2.5 Add double jump system with 2.5m height (75% of single jump)
+  - [x] 2.6 Implement slide mechanics with 0.6s duration, cancelable after 0.25s
+  - [x] 2.7 Add coyote time (0.12s) for edge forgiveness
+  - [x] 2.8 Configure physics settings (gravity -25.0 m/s², air control 0.8x)
+  - [x] 2.9 Implement ground detection and friction system
+  - [x] 2.10 Add bounce mechanics with 0.6x velocity retention
 
 - [ ] 3.0 Create camera system with follow, chase, and cinematic modes
   - [ ] 3.1 Create CameraController class with configurable camera settings
