@@ -44,19 +44,46 @@
     "renderingBudgets": {
       "lowQuality": {
         "maxDrawCalls": 200,
-        "maxTriangles": 50000,
+        "maxTriangles": 25000,
+        "maxVertices": 37500,
+        "maxSetPassCalls": 30,
+        "maxBatches": 60,
         "maxTextureSize": 1024
       },
       "mediumQuality": {
         "maxDrawCalls": 300,
-        "maxTriangles": 100000,
+        "maxTriangles": 50000,
+        "maxVertices": 75000,
+        "maxSetPassCalls": 50,
+        "maxBatches": 100,
         "maxTextureSize": 2048
       },
       "highQuality": {
         "maxDrawCalls": 500,
-        "maxTriangles": 200000,
+        "maxTriangles": 75000,
+        "maxVertices": 112500,
+        "maxSetPassCalls": 75,
+        "maxBatches": 150,
         "maxTextureSize": 2048
       }
+    },
+    "performance": {
+      "targetFrameRate": 60,
+      "minimumFrameRate": 30,
+      "memoryBudget": 512,
+      "dynamicQualityEnabled": true,
+      "dynamicResolutionEnabled": true,
+      "qualityAdjustmentSensitivity": 0.8,
+      "performanceMonitoringInterval": 1.0
+    },
+    "memory": {
+      "memoryBudget": 512,
+      "textureMemoryBudget": 256,
+      "meshMemoryBudget": 64,
+      "audioMemoryBudget": 32,
+      "enableAutomaticCleanup": true,
+      "cleanupInterval": 30,
+      "emergencyCleanupThreshold": 0.95
     }
   },
   "deviceSpecifications": {
