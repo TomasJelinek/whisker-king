@@ -579,6 +579,61 @@ namespace WhiskerKing.Player
             return moveDirection;
         }
 
+        /// <summary>
+        /// Reset player state (for checkpoints, level restart, etc.)
+        /// </summary>
+        public void ResetPlayerState()
+        {
+            // Reset movement state
+            velocity = Vector3.zero;
+            isGrounded = true;
+            isSliding = false;
+            canDoubleJump = true;
+            hasUsedDoubleJump = false;
+            
+            // Reset timing
+            lastGroundedTime = Time.time;
+            slideStartTime = 0f;
+            bounceStartTime = 0f;
+            
+            // Reset input state
+            jumpPressed = false;
+            jumpHeld = false;
+            slidePressed = false;
+            movementInput = Vector2.zero;
+            
+            // Clear input buffer
+            if (inputBuffer != null)
+            {
+                inputBuffer.ClearAllInputs();
+            }
+            
+            if (debugMode)
+            {
+                Debug.Log("PlayerController state reset");
+            }
+        }
+
+        /// <summary>
+        /// Add force to player (for external systems like spring crates)
+        /// </summary>
+        public void AddForce(Vector3 force)
+        {
+            velocity += force;
+            
+            // If upward force, consider as not grounded
+            if (force.y > 0)
+            {
+                isGrounded = false;
+                lastGroundedTime = Time.time - (coyoteTimeMS / 1000f) - 0.1f;
+            }
+            
+            if (debugMode)
+            {
+                Debug.Log($"External force applied: {force}");
+            }
+        }
+
         #endregion
 
         #region Jumping
