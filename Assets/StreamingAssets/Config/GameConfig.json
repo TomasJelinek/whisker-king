@@ -1,0 +1,434 @@
+{
+  "gameInfo": {
+    "name": "Whisker King",
+    "version": "1.0.0",
+    "buildNumber": 1,
+    "configVersion": "1.0",
+    "lastUpdated": "2024-01-15T10:00:00Z"
+  },
+  "performanceTargets": {
+    "frameRate": {
+      "target": 60,
+      "minimum": 30,
+      "maxFrameTime": 16.67,
+      "vSyncEnabled": true
+    },
+    "memoryBudgets": {
+      "lowQuality": {
+        "totalHeapMB": 512,
+        "textureMB": 256,
+        "audioMB": 64,
+        "scriptsMB": 128,
+        "otherMB": 64
+      },
+      "mediumQuality": {
+        "totalHeapMB": 768,
+        "textureMB": 384,
+        "audioMB": 96,
+        "scriptsMB": 192,
+        "otherMB": 96
+      },
+      "highQuality": {
+        "totalHeapMB": 1024,
+        "textureMB": 512,
+        "audioMB": 128,
+        "scriptsMB": 256,
+        "otherMB": 128
+      }
+    },
+    "loadTimes": {
+      "initialLoadMaxSeconds": 10.0,
+      "levelLoadMaxSeconds": 5.0,
+      "assetStreamingMaxSeconds": 2.0
+    },
+    "renderingBudgets": {
+      "lowQuality": {
+        "maxDrawCalls": 200,
+        "maxTriangles": 50000,
+        "maxTextureSize": 1024
+      },
+      "mediumQuality": {
+        "maxDrawCalls": 300,
+        "maxTriangles": 100000,
+        "maxTextureSize": 2048
+      },
+      "highQuality": {
+        "maxDrawCalls": 500,
+        "maxTriangles": 200000,
+        "maxTextureSize": 2048
+      }
+    }
+  },
+  "deviceSpecifications": {
+    "minimumSpecs": {
+      "android": {
+        "chipset": "Snapdragon 660",
+        "gpu": "Adreno 512",
+        "ramMB": 3072,
+        "apiLevel": 21,
+        "openGLVersion": "3.1"
+      },
+      "ios": {
+        "chipset": "A10 Fusion",
+        "ramMB": 2048,
+        "minimumVersion": "12.0",
+        "metalSupport": true
+      },
+      "webgl": {
+        "webglVersion": "2.0",
+        "webgl1Fallback": true,
+        "memoryMB": 512,
+        "requiresHTTPS": true
+      }
+    },
+    "recommendedSpecs": {
+      "android": {
+        "chipset": "Snapdragon 855",
+        "gpu": "Adreno 640",
+        "ramMB": 4096,
+        "apiLevel": 28,
+        "vulkanSupport": true
+      },
+      "ios": {
+        "chipset": "A12 Bionic",
+        "ramMB": 3072,
+        "minimumVersion": "14.0",
+        "metalSupport": true
+      }
+    },
+    "highEndSpecs": {
+      "android": {
+        "chipset": "Snapdragon 8 Gen 1",
+        "gpu": "Adreno 730",
+        "ramMB": 6144,
+        "apiLevel": 31,
+        "vulkanSupport": true
+      },
+      "ios": {
+        "chipset": "A14 Bionic",
+        "ramMB": 4096,
+        "minimumVersion": "15.0",
+        "metalSupport": true
+      }
+    }
+  },
+  "qualitySettings": {
+    "autoQualityAdjustment": {
+      "enabled": true,
+      "checkIntervalSeconds": 2.0,
+      "sampleFrames": 30,
+      "thresholds": {
+        "lowQualityFPS": 45.0,
+        "mediumQualityFPS": 55.0,
+        "highQualityFPS": 65.0
+      }
+    },
+    "qualityLevels": {
+      "low": {
+        "renderScale": 0.8,
+        "shadowsEnabled": false,
+        "antiAliasing": "None",
+        "textureQuality": "Quarter",
+        "particleBudget": 256,
+        "postProcessingEnabled": false
+      },
+      "medium": {
+        "renderScale": 1.0,
+        "shadowsEnabled": true,
+        "antiAliasing": "MSAA2x",
+        "textureQuality": "Half",
+        "particleBudget": 1024,
+        "postProcessingEnabled": true
+      },
+      "high": {
+        "renderScale": 1.0,
+        "shadowsEnabled": true,
+        "antiAliasing": "MSAA4x",
+        "textureQuality": "Full",
+        "particleBudget": 2048,
+        "postProcessingEnabled": true
+      }
+    }
+  },
+  "playerMovement": {
+    "physics": {
+      "runSpeed": 8.0,
+      "slideSpeed": 10.0,
+      "jumpHeight": 3.0,
+      "jumpHeightHold": 4.5,
+      "doubleJumpHeight": 2.5,
+      "gravity": -25.0,
+      "pounceGravity": -45.0,
+      "airControl": 0.8,
+      "groundFriction": 0.85,
+      "airFriction": 0.95,
+      "bounceDamping": 0.6
+    },
+    "input": {
+      "bufferTimeMS": 120,
+      "coyoteTimeMS": 120,
+      "slideDurationMS": 600,
+      "slideMinCancelTimeMS": 250
+    },
+    "combat": {
+      "tailWhip": {
+        "windupTimeMS": 100,
+        "activeTimeMS": 180,
+        "recoveryTimeMS": 120,
+        "damage": 25.0,
+        "stunDuration": 1.5,
+        "range": 2.5,
+        "angleDegreess": 270.0
+      }
+    }
+  },
+  "cameraSettings": {
+    "followMode": {
+      "distance": 8.0,
+      "height": 3.0,
+      "damping": 5.0,
+      "lookAheadDistance": 4.0,
+      "lookAheadHeight": 2.0,
+      "lookAheadDamping": 3.0
+    },
+    "chaseMode": {
+      "fov": 85.0,
+      "distance": 6.0,
+      "height": 2.5
+    },
+    "comfort": {
+      "motionBlurEnabled": false,
+      "shakeIntensity": 0.5
+    }
+  },
+  "levelDesign": {
+    "structure": {
+      "widthMeters": 17.5,
+      "lengthMetersMin": 150,
+      "lengthMetersMax": 300,
+      "heightMeters": 10,
+      "checkpointIntervalSeconds": 30
+    },
+    "collectibles": {
+      "fishTreats": {
+        "minimumPerLevel": 50,
+        "mainPathPercentage": 60,
+        "sideRoutesPercentage": 30,
+        "hiddenPercentage": 10,
+        "spacingMeters": 3.0
+      },
+      "goldenMouseTokens": {
+        "perLevel": 3,
+        "earlyPercentage": 30,
+        "middlePercentage": 40,
+        "latePercentage": 30
+      },
+      "yarn": {
+        "totalPerLevel": 300,
+        "conversionRatio": 10,
+        "crateAmount": 20
+      }
+    },
+    "crates": {
+      "standard": {
+        "health": 1,
+        "reward": 10,
+        "rewardType": "FishTreats"
+      },
+      "yarn": {
+        "health": 1,
+        "reward": 20,
+        "rewardType": "Yarn"
+      },
+      "spring": {
+        "health": 1,
+        "launchHeight": 6.0
+      },
+      "boom": {
+        "fuseTimeSeconds": 2.0,
+        "chainReactionRadius": 3.0,
+        "damage": 50.0
+      },
+      "mystery": {
+        "positiveChance": 0.7,
+        "negativeChance": 0.3
+      }
+    }
+  },
+  "audioSettings": {
+    "categories": {
+      "master": {
+        "defaultVolume": 1.0,
+        "maxSimultaneousSounds": 32
+      },
+      "music": {
+        "defaultVolume": 0.8,
+        "maxSimultaneousSounds": 2
+      },
+      "sfxPlayer": {
+        "defaultVolume": 1.0,
+        "maxSimultaneousSounds": 8
+      },
+      "sfxWorld": {
+        "defaultVolume": 1.0,
+        "maxSimultaneousSounds": 16
+      },
+      "sfxUI": {
+        "defaultVolume": 1.0,
+        "maxSimultaneousSounds": 4
+      },
+      "voice": {
+        "defaultVolume": 1.0,
+        "maxSimultaneousSounds": 1
+      }
+    },
+    "format": {
+      "sampleRate": 44100,
+      "bitDepth": 16,
+      "compressionQuality": {
+        "music": 128,
+        "sfx": 96
+      }
+    },
+    "spatialAudio": {
+      "enabled": true,
+      "maxDistance": 50.0,
+      "rolloffMode": "Logarithmic",
+      "dopplerLevel": 1.0
+    }
+  },
+  "uiSettings": {
+    "accessibility": {
+      "colorBlindSupport": true,
+      "keyboardNavigation": true,
+      "fontSize": "Medium",
+      "contrastMode": "Normal"
+    },
+    "mobile": {
+      "touchControlsEnabled": true,
+      "gestureRecognition": true,
+      "hapticFeedbackEnabled": true
+    },
+    "display": {
+      "safeAreaEnabled": true,
+      "notchSupport": true,
+      "orientationLock": "Landscape"
+    }
+  },
+  "analyticsSettings": {
+    "enabled": true,
+    "sessionTracking": true,
+    "performanceTracking": true,
+    "crashReporting": true,
+    "customEvents": true,
+    "dataRetentionDays": 90,
+    "privacyMode": "OptIn"
+  },
+  "debugSettings": {
+    "developmentBuild": false,
+    "profilerEnabled": false,
+    "consoleEnabled": false,
+    "debugUI": false,
+    "performanceOverlay": false,
+    "memoryTracker": false,
+    "cheatCodesEnabled": false
+  },
+  "buildSettings": {
+    "platforms": {
+      "webgl": {
+        "compressionFormat": "Brotli",
+        "memorySize": 512,
+        "exceptionSupport": false,
+        "threading": true,
+        "wasm": true
+      },
+      "android": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 33,
+        "architecture": "ARM64",
+        "scriptingBackend": "IL2CPP",
+        "buildAppBundle": true
+      },
+      "ios": {
+        "minimumVersion": "12.0",
+        "architecture": "ARM64",
+        "scriptingBackend": "IL2CPP",
+        "stripEngineCode": true
+      }
+    },
+    "optimization": {
+      "codeStripping": "Aggressive",
+      "managedStrippingLevel": "High",
+      "scriptOptimization": "Release",
+      "il2cppOptimization": "Runtime"
+    }
+  },
+  "assetSettings": {
+    "textureCompression": {
+      "webgl": "ASTC",
+      "android": "ASTC",
+      "ios": "ASTC",
+      "fallback": "ETC2"
+    },
+    "audioCompression": {
+      "webgl": "OGG",
+      "mobile": "MP3"
+    },
+    "meshCompression": {
+      "vertexCompression": "High",
+      "compressionLevel": 2
+    },
+    "addressableSettings": {
+      "enableRemoteContent": true,
+      "cacheSizeMB": 100,
+      "timeoutSeconds": 30
+    }
+  },
+  "worldSettings": {
+    "seasideDocks": {
+      "barrelSpeed": 4.0,
+      "barrelDamage": 20.0,
+      "gullPatrolRadius": 8.0,
+      "gullAttackRange": 2.0,
+      "waterHazard": true
+    },
+    "nightCityRooftops": {
+      "fanRotationSpeed": 90.0,
+      "fanDamage": 15.0,
+      "botPatrolRange": 6.0,
+      "billboardCycleSeconds": 4.0,
+      "neonPulseSeconds": 2.0
+    },
+    "templeGardens": {
+      "statueSpeed": 5.0,
+      "statueDamage": 25.0,
+      "beetleCycleSeconds": 3.0,
+      "bridgeSwayAmplitude": 0.5,
+      "bridgeSwayPeriod": 2.0,
+      "leafSlideSpeedMultiplier": 1.5
+    }
+  },
+  "metaSettings": {
+    "configValidation": {
+      "strictMode": true,
+      "validateOnLoad": true,
+      "logMissingKeys": true
+    },
+    "environmentOverrides": {
+      "development": {
+        "debugSettings.developmentBuild": true,
+        "debugSettings.profilerEnabled": true,
+        "debugSettings.cheatCodesEnabled": true
+      },
+      "testing": {
+        "analyticsSettings.enabled": false,
+        "debugSettings.performanceOverlay": true
+      },
+      "production": {
+        "debugSettings.developmentBuild": false,
+        "debugSettings.profilerEnabled": false,
+        "debugSettings.cheatCodesEnabled": false
+      }
+    }
+  }
+}
