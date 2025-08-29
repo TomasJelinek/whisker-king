@@ -84,6 +84,23 @@
       "enableAutomaticCleanup": true,
       "cleanupInterval": 30,
       "emergencyCleanupThreshold": 0.95
+    },
+    "testing": {
+      "enableAutomatedTesting": true,
+      "enablePerformanceTesting": true,
+      "enableRegressionTesting": true,
+      "testExecutionTimeout": 60,
+      "maxTestFailures": 10,
+      "enableContinuousTesting": false,
+      "continuousTestInterval": 300,
+      "generateTestReports": true,
+      "enableCodeCoverage": true,
+      "targetCodeCoverage": 0.8,
+      "performanceRegressionThreshold": 0.1,
+      "memoryLeakThreshold": 50.0,
+      "qualityAssuranceEnabled": true,
+      "maxCodeComplexity": 10.0,
+      "maxMethodLines": 50
     }
   },
   "deviceSpecifications": {
